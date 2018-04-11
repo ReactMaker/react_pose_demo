@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import randomstring from 'randomstring';
 import { PoseGroup } from 'react-pose';
 import { Item, Button } from './style';
-import { Z_BUF_ERROR } from 'zlib';
 
 export default class Main extends Component {
   state = {
