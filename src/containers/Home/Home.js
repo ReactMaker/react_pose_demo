@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import randomstring from 'randomstring';
 import { PoseGroup } from 'react-pose';
-import { Item, Button } from './style';
+import { Item, Button, NameBox } from './style';
 
 export default class Main extends Component {
   state = {
@@ -11,6 +11,7 @@ export default class Main extends Component {
     const newItem = {
       id: Math.random(),
       name: randomstring.generate(),
+      active: false,
     };
     this.setState({ items: [...this.state.items, newItem] });
     // setTimeout(this.addItem, 3000);
@@ -26,7 +27,13 @@ export default class Main extends Component {
   removeItem = () => {
     const randomIndex = Math.floor(Math.random() * this.state.items.length);
     this.state.items.splice(randomIndex, 1);
-    this.setState({items: [...this.state.items]});
+    this.setState({ items: [...this.state.items] });
+  }
+  clickItem = (itemId) => {
+    console.log('click item', itemId);
+    const item = this.state.items.find(d => d.id === itemId);
+    item.active = !item.active;
+    this.setState({ items: [...this.state.items] });
   }
   render() {
     const { items } = this.state;
@@ -37,7 +44,10 @@ export default class Main extends Component {
         <Button onClick={this.removeItem}>remove item</Button>
         <PoseGroup>
           {
-            items.map(d => <Item key={d.id}>{d.name}</Item>)
+            items.map(d => (
+              <Item onClick={() => this.clickItem(d.id)} key={d.id}>
+                <NameBox pose={d.active ? 'active' : 'idle'}>{d.name}</NameBox>
+              </Item>))
           }
         </PoseGroup>
       </Fragment>
