@@ -1,14 +1,20 @@
-# Simple React Start Kit 2017
+# React Pose Demo
 
-這個環境包可以讓你快速體驗 ReactJS 開發環境的便利，我們並沒有在裏面放入額外的套件(例如 redux, karma)，希望可以讓你用最簡單的環境開始學習 React
+Use react-pose and styled-components make animation list.
+使用 react-pose 以及 styled-components 建立動畫列表。
 
-## 特色
+## Demo
+![screenshot](screenshot/screenshot.gif)
 
-* [react 16](https://github.com/facebook/react)
-* [react-router 4](https://reacttraining.com/react-router/web/example/basic)
+
+## 特色(Feature)
+
+* [react 16.3](https://github.com/facebook/react)
 * [webpack 4](https://github.com/webpack/webpack)
 * [babel 6](https://github.com/babel/babel)
 * [eslint](http://eslint.org)
+* [styled-components](https://www.styled-components.com/)
+* [react-pose](https://www.npmjs.com/package/react-pose)
 
 ## 需求配置
 * node `^6.11.5`
