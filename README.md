@@ -6,6 +6,8 @@ Use react-pose and styled-components make animation list.
 
 ![screenshot](screenshot/screenshot.gif)
 
+![screenshot2](screenshot/screenshot2.gif)
+
 ## [Demo](https://reactmaker.github.io/react_pose_demo/)
 
 ## 特色(Feature)
