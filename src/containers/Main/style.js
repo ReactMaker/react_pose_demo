@@ -10,7 +10,7 @@ export const Fade = posed.div({
   exit: { opacity: 0 },
 });
 
-export const Item = styled(Fade) `
+export const Item = styled(Fade)`
   margin: 10px 0;
   border: 1px solid #ccc;
   color: #555;
@@ -25,7 +25,7 @@ export const scale = posed.div({
   },
 });
 
-export const NameBox = styled(scale) `
+export const NameBox = styled(scale)`
   padding: 20px;
 `;
 

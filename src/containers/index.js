@@ -1,3 +1,20 @@
-import Home from './Home';
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Menu from './Menu';
+import Main from './Main';
 
-export default Home;
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export default class App extends Component {
+  render() {
+    return (
+      <AppContainer>
+        <Menu />
+        <Main />
+      </AppContainer>
+    );
+  }
+}

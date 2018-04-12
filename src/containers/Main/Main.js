@@ -38,7 +38,7 @@ export default class Main extends Component {
   render() {
     const { items } = this.state;
     return (
-      <Fragment>
+      <div>
         <Button onClick={this.addItem}>add item</Button>
         <Button onClick={this.shuffle}>shuffle</Button>
         <Button onClick={this.removeItem}>remove item</Button>
@@ -50,7 +50,7 @@ export default class Main extends Component {
               </Item>))
           }
         </PoseGroup>
-      </Fragment>
+      </div>
     );
   }
 }
